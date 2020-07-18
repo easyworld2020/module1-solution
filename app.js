@@ -13,6 +13,7 @@
     $scope.displayMessage = function () {
       var lunchList = $scope.lunchList.trim();
       if (lunchList) {
+        $scope.errorMessage = '';
         var lunchItems = lunchList.split(",");
         if ((lunchItems.length >3 && lunchItems[3]) || lunchItems.length >4 ) {
           $scope.message = "Too much!";
@@ -20,15 +21,14 @@
           $scope.message = "Enjoy!";
         }
       } else {
-        $scope.message ='Please enter data first.';
+        $scope.message ='';
+        $scope.errorMessage ='Please enter data first.';
       }
     };
 
-    $scope.checkList = function () {
-      var lunchList = $scope.lunchList.trim();
-      if (!lunchList) {
-        $scope.message ='';
-      }
+    $scope.clearMessage = function () {
+      $scope.message ='';
+      $scope.errorMessage = '';
     }
   }
 
