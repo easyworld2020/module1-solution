@@ -1,0 +1,38 @@
+body { 
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.container{
+width: 600px;
+}
+h1 { 
+    font-family: Segoe Print;
+    text-align: center;
+    font-size: 5.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin: 2rem 0;
+}
+.error {
+    color: red;
+}
+.message { 
+    font-size: 1.3em; 
+    font-weight: bold; 
+}
+#lunch-menu {
+    width: 570px;
+}
+#btn-check {
+    color: #ffffff;
+    background: #078cc5;
+    border-color: #078cc5;
+    background: linear-gradient(to bottom, #078cc5 0%, #0574ac 50%, #0574ac 100%);
+    background: -webkit-linear-gradient(to bottom, #078cc5 0%, #0574ac 50%, #0574ac 100%);
+    background: -moz-linear-gradient(to bottom, #078cc5 0%, #0574ac 50%, #0574ac 100%);
+    background: -ms-linear-gradient(to bottom, #078cc5 0%, #0574ac 50%, #0574ac 100%);
+    background: -O-linear-gradient(to bottom, #078cc5 0%, #0574ac 50%, #0574ac 100%);
+    text-shadow: 1px 1px 1px #056999,-1px -1px 1px #056999,1px -1px 1px #056999,-1px 1px 1px #056999; 
+    float: right;
+    margin-top: 20px;
+}
