@@ -15,7 +15,9 @@
       if (lunchList) {
         
         var lunchItems = lunchList.split(",");
-        if ((lunchItems.length >3 && lunchItems[3]) || lunchItems.length >4 ) {
+        var lunchItemsCount = lunchItems.filter(Boolean).length;
+  
+        if (lunchItemsCount >3) {
           $scope.message = "";
           $scope.errorMessage = 'Too much!';
         } else {
