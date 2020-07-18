@@ -15,6 +15,9 @@
       if (lunchList) {
         
         var lunchItems = lunchList.split(",");
+        for (var i = 0, l = lunchItems.length; i < l; ++i) {
+          lunchItems[i] = lunchItems[i].trim();
+        }
         var lunchItemsCount = lunchItems.filter(Boolean).length;
   
         if (lunchItemsCount >3) {
