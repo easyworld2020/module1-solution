@@ -23,7 +23,15 @@
         $scope.message ='';
       }
     };
+
+    $scope.checkList = function () {
+      var lunchList = $scope.lunchList.trim();
+      if (!lunchList) {
+        $scope.message ='';
+      }
+    }
   }
+
   })();
   
   
