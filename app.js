@@ -13,16 +13,18 @@
     $scope.displayMessage = function () {
       var lunchList = $scope.lunchList.trim();
       if (lunchList) {
-        $scope.errorMessage = '';
+        
         var lunchItems = lunchList.split(",");
         if ((lunchItems.length >3 && lunchItems[3]) || lunchItems.length >4 ) {
-          $scope.message = "Too much!";
+          $scope.message = "";
+          $scope.errorMessage = 'Too much!';
         } else {
+          $scope.errorMessage = '';
           $scope.message = "Enjoy!";
         }
       } else {
         $scope.message ='';
-        $scope.errorMessage ='Please enter data first.';
+        $scope.errorMessage ='Please enter data first';
       }
     };
 

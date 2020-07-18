@@ -9,21 +9,23 @@
     <link rel="stylesheet" href="styles/module1.css">
   </head>
 <body>
-   <div class="container" ng-controller='LunchCheckController'>
-     <h1>Lunch Checker</h1>
+  <div class="container" ng-controller='LunchCheckController'>
+    <h1>Lunch Checker</h1>
 
-         <div class="form-group">
-             <input ng-model="lunchList" ng-keyup="clearMessage();"  id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
-         </div>
-         <div class="form-group">
-             <button ng-click="displayMessage();" class="btn btn-default" id="btn-check">Check If Too Much</button>
-         </div>
-         <div class="form-group message">
-          {{message}}
-          <div ng-hide="!errorMessage" class="error">Error: {{errorMessage}}</div>
-         </div>
+    <div class="form-group">
+        <input ng-model="lunchList" ng-keyup="clearMessage();"  id="lunch-menu" type="text"
+        placeholder="list comma separated dishes you usually have for lunch"
+        class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <button ng-click="displayMessage();" class="btn btn-default" id="btn-check">Check If Too Much</button>
+    </div>
+
+    <div ng-show="message" class="alert alert-success">{{message}}</div>
+    <div ng-show="errorMessage" class=" alert alert-danger">{{errorMessage}}</div>
+
+
    </div>
 
 </body>
