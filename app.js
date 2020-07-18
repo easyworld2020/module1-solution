@@ -11,31 +11,33 @@
 
 
     $scope.displayMessage = function () {
-      var lunchList = $scope.lunchList.trim();
-      if (lunchList) {
-        
-        var lunchItems = lunchList.split(",");
-        for (var i = 0, l = lunchItems.length; i < l; ++i) {
-          lunchItems[i] = lunchItems[i].trim();
+      
+      var lunchItems = $scope.lunchList.split(",");
+      var lunchItemsCount = lunchItems.length;
+
+      for (var i = 0; i < lunchItems.length;  i++ ){
+        if (lunchItems[i].trim() == "" ) {
+          lunchItemsCount--;
         }
-        var lunchItemsCount = lunchItems.filter(Boolean).length;
-  
-        if (lunchItemsCount >3) {
+      }
+
+     if (lunchItemsCount > 0){
+        if (lunchItemsCount > 3) {
           $scope.message = "";
           $scope.errorMessage = 'Too much!';
         } else {
-          $scope.errorMessage = '';
+          $scope.errorMessage = "";
           $scope.message = "Enjoy!";
         }
       } else {
-        $scope.message ='';
+        $scope.message = "";
         $scope.errorMessage ='Please enter data first';
       }
     };
 
     $scope.clearMessage = function () {
-      $scope.message ='';
-      $scope.errorMessage = '';
+      $scope.message = "";
+      $scope.errorMessage = "";
     }
   }
 
